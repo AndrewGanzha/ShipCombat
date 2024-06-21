@@ -1,3 +1,9 @@
+import { Field } from './components/UI/Board/Field/Field';
+
 export const App = () => {
-  return <div>23</div>;
+  return (
+    <div>
+      <Field />
+    </div>
+  );
 };

@@ -1,0 +1,11 @@
+@import '../../../../styles/variables.scss';
+
+.field {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  fill: #fff;
+  border: 2px solid $black;
+  box-shadow: 5px 5px $black;
+  cursor: pointer;
+}
