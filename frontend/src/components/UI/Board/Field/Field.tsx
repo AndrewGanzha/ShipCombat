@@ -1,5 +1,7 @@
-import './Field.scss';
+import { FieldInterface } from '../../../../types';
 
-export const Field = () => {
-  return <button className='field'></button>;
+export const Field = (props: FieldInterface) => {
+  return (
+    <button className={`field ${props.isShoot ? 'field-shoot' : ''}`}></button>
+  );
 };
