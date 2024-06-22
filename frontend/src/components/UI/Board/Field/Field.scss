@@ -10,7 +10,7 @@
   border: 2px solid $black;
   box-shadow: 5px 5px $black;
   cursor: pointer;
-  &-shoot::before {
+  &-miss::before {
     content: ''; /* добавляемый пустой контент для псевдоэлемента */
     position: absolute; /* абсолютное позиционирование относительно .field */
     top: 50%; /* размещаем относительно верхнего края родителя */
@@ -23,6 +23,30 @@
     height: 10px;
     background-color: black;
     border-radius: 50%; /* делаем квадратный элемент круглым */
+  }
+  &-hit {
+    position: relative;
+    background-color: $light-green;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: $black;
+      transform-origin: center;
+    }
+
+    &::before {
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateX(-50%) rotate(-45deg);
+    }
   }
 }
 

@@ -1,7 +1,10 @@
 import { FieldInterface } from '../../../../types';
+import './Field.scss';
 
-export const Field = (props: FieldInterface) => {
+export const Field = ({ shotStatus }: FieldInterface) => {
   return (
-    <button className={`field ${props.isShoot ? 'field-shoot' : ''}`}></button>
+    <button
+      className={`field ${shotStatus === 'MISS' ? 'field-miss' : shotStatus === 'HIT' ? 'field-hit' : ''}`}
+    ></button>
   );
 };
